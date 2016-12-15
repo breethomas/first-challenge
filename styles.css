@@ -23,9 +23,16 @@ button {
 .photo {
   border: 1px dashed;
   height: 100vh;
-  position: absolute;
-  float: right;
+  /*position: absolute;
+  float: right;*/
+}
+
+img {
   object-fit: cover;
+  width: 35vh;
+  height: 100vh;
+  float: right;
+  position: absolute;
 }
 
 
