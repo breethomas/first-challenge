@@ -3,6 +3,7 @@ body {
   background-color: gray;
   margin: 10px;
   color: white;
+  display: flex;
 }
 
 h1, p {
@@ -19,12 +20,13 @@ button {
 
 
 /*FLEXBOX ATTEMPT*/
-/*.photo {
-  display: flex;
+.photo {
   border: 1px dashed;
   height: 100vh;
   position: absolute;
-}*/
+  float: right;
+  object-fit: cover;
+}
 
 
 .main-box {
@@ -34,6 +36,7 @@ button {
   flex-wrap: wrap;
   align-content:flex-start;
   float: left;
+  width: 600px;
 }
 
 .box {
