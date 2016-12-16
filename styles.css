@@ -1,30 +1,38 @@
-h1, p {
-  padding-left: 10px;
-}
-
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0px;
   color: white;
 }
 
+h1 {
+  padding-left: 10px;
+}
+
+section {
+  padding-left: 10px;
+
+}
+
+.box p {
+  text-align: center;
+}
+
 button {
   background-color: inherit;
   color: white;
   margin-left: 10px;
-  padding: 1%;
+  padding: 10px;
+  margin-top: 15px;
   border: 1px solid white;
 }
 
 /*Container holding photo container and box container*/
 .wrap {
   display: flex;
-  /*background-image: image("Cat-Portrait.jpg");*/
 }
 
 /*Photo Container*/
 .photo {
-  border: 1px dashed;
   width: 30%;
   top: 0px;
   right: 0px;
@@ -43,7 +51,7 @@ button {
 }
 
 /*Image Properties*/
-img {
+.main-photo {
   object-fit: fill;
   height: 100%;
 }
@@ -84,7 +92,16 @@ img {
 }
 
 #eight {
-  background-color: #CB904D;
+  background-color: #DFCC74;
+}
+
+/*HOVER STATES*/
+button:hover {
+  font-size: 10px;
+}
+button:focus {
+  border: 1px solid white;
+  outline: none;
 }
 
 /*Media Query Stuff*/
@@ -97,7 +114,11 @@ img {
     font-size: 20px;
   }
 
-  p {
+  button {
+    margin-top: 5px;
+  }
+
+  .bio {
     font-size: 8px;
   }
 
@@ -122,7 +143,10 @@ img {
 
   #one {
     width: 100%;
-    background-color: #75485E;
+  }
+
+  #eight {
+    width: 100%;
   }
 }
 
@@ -136,7 +160,7 @@ img {
     font-size: 30px;
   }
 
-  p {
+  .bio {
     font-size: 15px;
   }
 
@@ -159,7 +183,6 @@ img {
 
   #one {
     width: 66.66%;
-    background-color: #75485E;
   }
 }
 
@@ -173,7 +196,7 @@ img {
     font-size: 25px;
   }
 
-  p {
+  .bio {
     font-size: 15px;
   }
 
@@ -198,6 +221,8 @@ img {
 
   #one {
     width: 100%;
-    background-color: #75485E;
+  }
+  #eight {
+    width: 100%;
   }
 }
