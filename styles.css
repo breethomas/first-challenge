@@ -1,12 +1,11 @@
-body {
-  font-family: 'Open Sans', sans-serif;
-  /*background-color: gray;*/
-  margin: 0px;
-  color: white;
-}
-
 h1, p {
   padding-left: 10px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0px;
+  color: white;
 }
 
 button {
@@ -17,13 +16,12 @@ button {
   padding: 1%;
 }
 
-
-/*FLEXBOX ATTEMPT*/
+/*Container holding photo container and box container*/
 .wrap {
   display: flex;
-  /*border: 2px solid black;*/
 }
 
+/*Photo Container*/
 .photo {
   border: 1px dashed;
   width: 30%;
@@ -34,22 +32,22 @@ button {
   height: 100vh;
 }
 
-/*img {
-  object-fit: fill;;
-  /*width: 35vh;*/
-  /*height: 100vh;*/
-
-
-
+/*Box Container*/
 .main-box {
   display: flex;
   border: 1px dashed;
   flex-wrap: wrap;
   height: 100vh;
-  /*align-content:flex-start;*/
   width: 70%;
 }
 
+/*Image Properties*/
+/*img {
+  object-fit: fill;;
+  /*width: 35vh;*/
+  /*height: 100vh;*/
+
+/*BOXES*/
 .box {
   width: 33.33%;
   height: 33.33%;
@@ -59,68 +57,71 @@ button {
   width: 66.66%;
   background-color: #75485E;
 }
+
 #two {
   background-color: #C3E991;
 }
+
 #three {
   background-color: #51A3A3;
 }
+
 #four {
   background-color: #DFCC74;
 }
+
 #five {
   background-color: #75485E;
 }
+
 #six {
   background-color: #CB904D;
 }
+
 #seven {
   background-color: #51A3A3;
 }
+
 #eight {
   background-color: #CB904D;
 }
 
-
-
-/*MEDIA QUERIES*/
+/*Media Query Stuff*/
 @media screen and (max-width: 320px) {
+  body {
+    background-color: gray;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 8px;
+  }
+
+  .photo {
+    position: relative;
+    height: 160px;
+    width: 100%;
+    background-color: black;
+  }
+
+  .main-box {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+  }
 
   .box {
-    width: 50%;
     height: 160px;
+    width: 50%;
   }
 
   #one {
     width: 100%;
     background-color: #75485E;
-  }
-  .photo {
-    /*border: 1px dashed;*/
-    width: 100%;
-    height: 160px;
-    /*top: 0px;
-    right: 0px;*/
-    position: relative;
-    background-color: black;
-    /*height: 100vh;*/
-  }
-  .main-box {
-    display: flex;
-    /*border: 1px dashed;*/
-    flex-direction: row;
-    height: 100vh;
-    /*align-content:flex-start;*/
-    width: 100%;
-  }
-  h1 {
-    font-size: 20px;
-  }
-  p {
-    font-size: 8px;
-  }
-  body {
-    background-color: gray;
   }
 }
 
@@ -130,6 +131,27 @@ button {
     background-color: gray;
   }
 
+  h1 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .photo {
+    position: relative;
+    height: 160px;
+    width: 100%;
+    background-color: black;
+  }
+
+  .main-box {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+  }
   .box {
     width: 33.33%;
   }
@@ -137,30 +159,6 @@ button {
   #one {
     width: 66.66%;
     background-color: #75485E;
-  }
-  .photo {
-    /*border: 1px dashed;*/
-    width: 100%;
-    height: 160px;
-    /*top: 0px;
-    right: 0px;*/
-    position: relative;
-    background-color: black;
-    /*height: 100vh;*/
-  }
-  .main-box {
-    display: flex;
-    /*border: 1px dashed;*/
-    flex-direction: row;
-    height: 100vh;
-    /*align-content:flex-start;*/
-    width: 100%;
-  }
-  h1 {
-    font-size: 30px;
-  }
-  p {
-    font-size: 15px;
   }
 }
 
@@ -170,37 +168,35 @@ button {
     background-color: gray;
   }
 
+  h1 {
+    font-size: 25px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .photo {
+    width: 100%;
+    height: 160px;
+    position: relative;
+    background-color: black;
+  }
+
+  .main-box {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+  }
+
   .box {
-    width: 50%;
     height: 200px;
+    width: 50%;
   }
 
   #one {
     width: 100%;
     background-color: #75485E;
-  }
-  .photo {
-    /*border: 1px dashed;*/
-    width: 100%;
-    height: 160px;
-    /*top: 0px;
-    right: 0px;*/
-    position: relative;
-    background-color: black;
-    /*height: 100vh;*/
-  }
-  .main-box {
-    display: flex;
-    /*border: 1px dashed;*/
-    flex-direction: row;
-    height: 100vh;
-    /*align-content:flex-start;*/
-    width: 100%;
-  }
-  h1 {
-    font-size: 25px;
-  }
-  p {
-    font-size: 15px;
   }
 }
