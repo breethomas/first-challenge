@@ -1,65 +1,228 @@
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: gray;
-  display: flex;
-  margin: 10px;
+  margin: 0px;
+  color: white;
 }
 
 h1 {
-  font-family: 600 15px 'Open Sans', sans-serif;
+  padding-left: 10px;
 }
 
+section {
+  padding-left: 10px;
 
-/*FLEXBOX ATTEMPT*/
-/*.media {
-  border: 1px dashed;
+}
+
+.box p {
+  text-align: center;
+}
+
+button {
+  background-color: inherit;
+  color: white;
+  margin-left: 10px;
+  padding: 10px;
+  margin-top: 15px;
+  border: 1px solid white;
+}
+
+/*Container holding photo container and box container*/
+.wrap {
+  display: flex;
+}
+
+/*Photo Container*/
+.photo {
+  width: 30%;
+  top: 0px;
+  right: 0px;
+  position: absolute;
+  background-color: black;
   height: 100vh;
-  width: 34%;
-  position: absolute; right: 10px;
-}*/
+}
+
+/*Box Container*/
 .main-box {
   display: flex;
   border: 1px dashed;
-  height: 100vh;
   flex-wrap: wrap;
-  align-content:flex-start;;
-  width: 60%;
+  height: 100vh;
+  width: 70%;
 }
 
+/*Image Properties*/
+.main-photo {
+  object-fit: fill;
+  height: 100%;
+}
+
+/*BOXES*/
 .box {
-  width: 200px;
-  height: 200px;
+  width: 33.33%;
+  height: 33.33%;
 }
 
 #one {
-  width: 400px;
-  background-color: red;
+  width: 66.66%;
+  background-color: #75485E;
 }
+
 #two {
-  background-color: orange;
+  background-color: #C3E991;
 }
+
 #three {
-  background-color: yellow;
+  background-color: #51A3A3;
 }
+
 #four {
-  background-color: green;
+  background-color: #DFCC74;
 }
+
 #five {
-  background-color: blue;
+  background-color: #75485E;
 }
+
 #six {
-  background-color: magenta
+  background-color: #CB904D;
 }
+
 #seven {
-  background-color: purple;
+  background-color: #51A3A3;
 }
+
 #eight {
-  background-color: lavender;
+  background-color: #DFCC74;
 }
-#photo {
-  flex:1;
-  width: 400px;
-  height: 600px;
-  background-color: black;
-  flex: initial;
+
+/*HOVER STATES*/
+button:hover {
+  font-size: 10px;
+}
+button:focus {
+  border: 1px solid white;
+  outline: none;
+}
+
+/*Media Query Stuff*/
+@media screen and (max-width: 320px) {
+  body {
+    background-color: gray;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  button {
+    margin-top: 5px;
+  }
+
+  .bio {
+    font-size: 8px;
+  }
+
+  .photo {
+    position: relative;
+    height: 160px;
+    width: 100%;
+    background-color: black;
+  }
+
+  .main-box {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .box {
+    height: 160px;
+    width: 50%;
+  }
+
+  #one {
+    width: 100%;
+  }
+
+  #eight {
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  body {
+    background-color: gray;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .bio {
+    font-size: 15px;
+  }
+
+  .photo {
+    position: relative;
+    height: 160px;
+    width: 100%;
+    background-color: black;
+  }
+
+  .main-box {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+  }
+  .box {
+    width: 33.33%;
+  }
+
+  #one {
+    width: 66.66%;
+  }
+}
+
+
+@media screen and (max-width: 550px) {
+  body {
+    background-color: gray;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  .bio {
+    font-size: 15px;
+  }
+
+  .photo {
+    width: 100%;
+    height: 160px;
+    position: relative;
+    background-color: black;
+  }
+
+  .main-box {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .box {
+    height: 200px;
+    width: 50%;
+  }
+
+  #one {
+    width: 100%;
+  }
+  #eight {
+    width: 100%;
+  }
 }
