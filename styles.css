@@ -58,6 +58,10 @@ button {
 
 /*BOXES*/
 .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 33.33%;
   height: 33.33%;
 }
@@ -195,6 +199,10 @@ button:focus {
 
   h1 {
     font-size: 25px;
+  }
+
+  button {
+    margin-bottom: 5px;
   }
 
   .bio {
