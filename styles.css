@@ -1,237 +1,133 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
-  margin: 0px;
   color: white;
 }
 
 h1 {
-  padding-left: 10px;
+  line-height: 2;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
-section {
-  padding-left: 10px;
-
+p {
+  line-height: 1.2;
 }
 
-.box p {
-  text-align: center;
+.buttons-container {
+  margin-top: 15px;
 }
 
 button {
+  display: inline-block;
   background-color: inherit;
   color: white;
-  margin-left: 10px;
   padding: 10px;
-  margin-top: 15px;
   border: 1px solid white;
 }
 
-/*Container holding photo container and box container*/
-.wrap {
-  display: flex;
-}
-
-/*Photo Container*/
-.photo {
-  width: 30%;
-  top: 0px;
-  right: 0px;
-  position: absolute;
-  background-color: black;
-  height: 100vh;
-}
-
-/*Box Container*/
-.main-box {
-  display: flex;
-  border: 1px dashed;
-  flex-wrap: wrap;
-  height: 100vh;
-  width: 70%;
-}
-
-/*Image Properties*/
-.main-photo {
-  object-fit: fill;
-  height: 100%;
-}
-
-/*BOXES*/
-.box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 33.33%;
-  height: 33.33%;
-}
-
-#one {
-  width: 66.66%;
-  background-color: #75485E;
-}
-
-#two {
-  background-color: #C3E991;
-}
-
-#three {
-  background-color: #51A3A3;
-}
-
-#four {
-  background-color: #DFCC74;
-}
-
-#five {
-  background-color: #75485E;
-}
-
-#six {
-  background-color: #CB904D;
-}
-
-#seven {
-  background-color: #51A3A3;
-}
-
-#eight {
-  background-color: #DFCC74;
-}
-
-/*HOVER STATES*/
 button:hover {
   font-size: 10px;
 }
+
 button:focus {
   border: 1px solid white;
   outline: none;
 }
 
-/*Media Query Stuff*/
-@media screen and (max-width: 320px) {
-  body {
-    background-color: gray;
-  }
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
-  h1 {
-    font-size: 20px;
-  }
+.hero-photo {
+  min-height: 300px;
+}
 
-  button {
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
 
-  .bio {
-    font-size: 8px;
-  }
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 50%;
+}
 
-  .photo {
-    position: relative;
-    height: 160px;
-    width: 100%;
-    background-color: black;
-  }
+.box-icon {
+  width: 60px;
+  width: 60px;
+}
 
-  .main-box {
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
-    width: 100%;
-  }
+.box p {
+  margin-bottom: 5px;
+}
 
-  .box {
-    height: 160px;
-    width: 50%;
-  }
+.box#heading-box {
+  align-items: flex-start;
+}
 
-  #one {
-    width: 100%;
-  }
+#heading-box {
+  padding: 15px;
+}
 
-  #eight {
-    width: 100%;
-  }
+#heading-box,
+#yarn {
+  background-color: #75485E;
+}
+
+#profile {
+  background-color: #C3E991;
+}
+
+#experience,
+#mouse {
+  background-color: #51A3A3;
+}
+
+#tricks,
+#about {
+  background-color: #DFCC74;
+}
+
+#laser-pointer {
+  background-color: #CB904D;
 }
 
 
-@media screen and (max-width: 800px) {
-  body {
-    background-color: gray;
-  }
+.portrait-image {
+  width: 100%;
+  height: auto;
+}
 
-  h1 {
-    font-size: 30px;
-  }
-
-  .bio {
-    font-size: 15px;
-  }
-
-  .photo {
-    position: relative;
-    height: 160px;
-    width: 100%;
-    background-color: black;
-  }
-
-  .main-box {
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
-    width: 100%;
+@media(min-width: 550px) {
+  .box#heading-box {
+    flex-grow: 100;
   }
   .box {
-    width: 33.33%;
-  }
-
-  #one {
-    width: 66.66%;
+    flex: 1 1 33.3333%;
   }
 }
 
-
-@media screen and (max-width: 550px) {
-  body {
-    background-color: gray;
-  }
-
-  h1 {
-    font-size: 25px;
-  }
-
-  button {
-    margin-bottom: 5px;
-  }
-
-  .bio {
-    font-size: 15px;
-  }
-
-  .photo {
-    width: 100%;
-    height: 160px;
-    position: relative;
-    background-color: black;
-  }
-
-  .main-box {
-    display: flex;
+@media(min-width: 900px) {
+  .wrapper {
     flex-direction: row;
-    height: 100vh;
-    width: 100%;
   }
-
+  .portrait-image {
+    height: 100%;
+  }
   .box {
-    height: 200px;
-    width: 50%;
+    flex: 1 1 50%;
   }
 
-  #one {
-    width: 100%;
-  }
-  #eight {
-    width: 100%;
-  }
 }
